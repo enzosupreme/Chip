@@ -1,3 +1,4 @@
+
 {
     
     "g":    ["Hello!","Hi!","Hola!","How's it going?","Sup?","Howdy!"],
@@ -7,7 +8,36 @@
     "a" :   ["Yes","Sure", "Of course", "I think so ", "Why not?","Hell Yes!", "No", "Noooooooooooo","naw", "Nope", "I don't think so", "Probably not"],
     "gen":  ["Romance","Comedy","Drama","Documentary","Action","Western","Horror","Sci-Fi","Thriller","Mystery","Musical","Animated","Romantic Comedy"],
     "dec":  ["00s","10s","20s","30s","40s","50s","60s","70s","80s","90s"],
-    "jokes":["What’s Forrest Gump’s password? 1forrest1","I tell dad jokes,but I don’t have any kids. I’m a faux pa.","What does a nosey pepper do? It gets jalapeño business.","If a child refuses to nap, are they guilty of resisting a rest?","Why do dads feel the need to tell such bad jokes? They just want to help you become a groan up.","I know a lot of jokes about retired people, but none of them work.","Why are spiders so smart? They can find everything on the web.", "RIP boiled water—you will be mist.","What do you call two octopuses that look the same? Itenticle.","What has one head, one foot, and four legs? A bed.","Sore throats are a pain in the neck.","What does a house wear? Address.","Why did the scarecrow win an award? He was out standing in his field.","What’s red and smells like blue paint? Red paint.","My son asked me to put his shoes on, but I don’t think they’ll fit me.","I’ve been bored recently, so I decided to take up fencing. The neighbors keep demanding that I put it back.","What do you call an unpredictable camera? A loose Canon.","I didn’t get a haircut, I got them all cut.","Which U.S. state is known for its especially small soft drinks? Minnesota.","What do sprinters eat before a race? Nothing—they fast.","What did one Dorito farmer say to the other? “Cool Ranch!”","Why couldn’t the bicycle stand up by itself? It was two-tired.","I’m so good at sleeping, I can do it with my eyes closed."],
-    "cheer":["There, there...everything will be fine.","Its going to be okay.", "I'm sure things will get better.", "Theres nothing to worry about","Things could be much worse.", "Don't worry, I'm here for you.", "Nobody's perfect, just keep doing your best and things will work out."]
+    "jokes":["What’s Forrest Gump’s password? 1forrest1",
+             "I tell dad jokes,but I don’t have any kids. I’m a faux pa.",
+             "What does a nosey pepper do? It gets jalapeño business.",
+             "If a child refuses to nap, are they guilty of resisting a rest?",
+             "Why do dads feel the need to tell such bad jokes? They just want to help you become a groan up.",
+             "I know a lot of jokes about retired people, but none of them work.",
+             "Why are spiders so smart? They can find everything on the web.", 
+             "RIP boiled water—you will be mist.",
+             "What do you call two octopuses that look the same? Itenticle.",
+             "What has one head, one foot, and four legs? A bed.",
+             "Sore throats are a pain in the neck.","What does a house wear? Address.",
+             "Why did the scarecrow win an award? He was out standing in his field.",
+             "What’s red and smells like blue paint? Red paint.",
+             "My son asked me to put his shoes on, but I don’t think they’ll fit me.",
+             "I’ve been bored recently, so I decided to take up fencing. The neighbors keep demanding that I put it back.",          "What do you call an unpredictable camera? A loose Canon.",
+             "I didn’t get a haircut, I got them all cut.",
+             "Which U.S. state is known for its especially small soft drinks? Minnesota.",
+             "What do sprinters eat before a race? Nothing—they fast.",
+             "What did one Dorito farmer say to the other? “Cool Ranch!”",
+             "Why couldn’t the bicycle stand up by itself? It was two-tired.",
+             "I’m so good at sleeping, I can do it with my eyes closed."],
 
+    "cheer":["There, there...everything will be fine.","Its going to be okay.", "I'm sure things will get better.", "Theres nothing to worry about","Things could be much worse.", "Don't worry, I'm here for you.", "Nobody's perfect, just keep doing your best and things will work out."],
+     "food":["Fast Food","Mexican", "Tex-Mex", "BBQ", "SeaFood", "Sushi","Italian","Indian","Thai","Filipino","Hawaiin","Japanese","Vietnamese","Burgers","Fruit", "Pizza", "Wings","Pasta","Stir Fry","Salad","a sandwich", "Poke", "Cajun", "Carribean", "Chinese", "Tacos"],
+  "weapons":["LightHammer","Warhammer","MorningStar","Club","Mace","Maul",
+             "Sword","Whip","Handaxe","Long Sword","Halberd","GreatSword","Scimitar",
+             "Dagger","Javelin","Shortbow","Rapier","Lance","Dart","Trident","War Pick","Spear","Crossbow","Longbow"],
+       "wt":["Bludgeoning","Slashing","Piercing"],
+   "items" :["Small Health Potion\n +2d4 Healh","Health Potion\n  +4d4 Health","Large Health Potion\n +4d6 Health",
+             "Swift potion\n\n Increases movement speed by 10","Liquid Armor\n +15 AC"],
+   "Armor" :["Chest Piece","Helmet","Arm Brace", "Leg Armor", "Belt", "Gloves", "Gauntlets"],
+   "Buff"  :["Poison", "Magic", "Flame", "Frost", "Lightning","Bludgeoning", "Slashing", "Piercing"]
 }
