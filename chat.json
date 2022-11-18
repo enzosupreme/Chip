@@ -39,5 +39,22 @@
    "items" :["Small Health Potion\n +2d4 Healh","Health Potion\n  +4d4 Health","Large Health Potion\n +4d6 Health",
              "Swift potion\n\n Increases movement speed by 10","Liquid Armor\n +15 AC"],
    "Armor" :["Chest Piece","Helmet","Arm Brace", "Leg Armor", "Belt", "Gloves", "Gauntlets"],
-   "Buff"  :["Poison", "Magic", "Flame", "Frost", "Lightning","Bludgeoning", "Slashing", "Piercing"]
+   "Buff"  :["Poison", "Magic", "Flame", "Frost", "Lightning","Bludgeoning", "Slashing", "Piercing"],
+   "Commands" :["!Rock, !Paper, or !Scissors:                Plays round of RPS",
+                "Search:                                         Returns top five google results for query",
+                "!Celeb(actor name):                         Returns IMDB page for actor",
+                "!IMDB(Movie name):                         Returns IMDB page for movie",
+                "!Movie:                                     Recomends random genre of movie",
+                "Loot!:                                      Opens chest and gives random loot",
+                "FOTW:                                       Returns IMD page for film of the week",
+                 "'Give me a quote chip':                    Returns random quote",
+                 "'Cheer me up chip':                        Chip will encourage you",
+                 "'What should I watch chip?':               Returns random IMDB movie page",
+                 "'What should I eat chip?':                 Reccomends what to eat",
+                 "'Wish me luck chip':                       Gives luck buff",
+                 "D20,D12,D10,D8,D6, or D4:                  Rolls Die",
+                 "'tell me a joke chip':                     Tells dad joke"
+                 
+                 ]
+   
 }

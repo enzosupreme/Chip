@@ -14,9 +14,14 @@ client = discord.Client() #connection to discord
 # ---- Data for Chat functions ------#
 
 file = open("chat.json","r")
+q_file = open("Quotes.json", "r")
+chatq = q_file.read()
 chatr = file.read()
 file.close()
+q_file.close()
 chat = json.loads(chatr)
+qs =   json.loads(chatq)
+quoter = qs['q']
 greet = chat['g']
 leave = chat['l']
 gn    = chat['n']
@@ -33,11 +38,12 @@ i     = chat['items']
 armor = chat['Armor']
 buff  = chat['Buff']
 att = ''
+com   = chat['Commands']
 
 #------------------------------------#
 
 #------------IMDB--------------------#
-FOTW = "https://www.imdb.com/title/tt0071315/?ref_=fn_al_tt_1"
+FOTW = "https://www.imdb.com/title/tt0074486/?ref_=hm_tpks_tt_i_3_pd_tp1_pbr_ic"
 movie = ('https://www.imdb.com/title/tt')
 def mov():
   r = random.randint(0,1)
@@ -73,15 +79,17 @@ def imdb_movie(movie):
   movies = ia.search_movie(movie)
   mid = movies[0].movieID
   return mid
+#---------------Commands------------#
+def comm(i):
+  return com[i]
+    
 
 #---------------QUOTE---------------#
 
 def get_quote():
-  response = requests.get("https://api.quotable.io/random")
-  quote_data = response.json()
-  #json_data = json.loads(quote_data)
-  quote = quote_data['content'] + " \n-" + quote_data['author']
-  return quote
+  roll = random.randint(0,len(quoter))
+  r = roll
+  return r
   
 #---------------JOKES---------------#
 def get_joke():
@@ -246,7 +254,16 @@ def weapon_roll():
       
   dicer = str(dic)
   damage = (dicer + " d" + dr)
-  weapon_loot = "```\n Level " + lvl +  "\n" + weap + "\nDamage Type: " + wet + "\nWeight: " + wait + " lbs\n" + "Value: " + worth + "gp\n" + "Damage: " + damage + "\n ```"
+  weapon_loot = (f'''
+  ```
+  Level: {lvl}
+     {weap}
+  Value: {worth}gp
+  Weight: {wait}oz
+  Damage: {damage} {wet}
+  ```
+  
+  ''')
   
   return weapon_loot
   
@@ -259,10 +276,10 @@ def item():
   return item_roll
   
 def armor_roll():
-  roll = random.randint(1,50)
+  roll = random.randint(1,20)
   roll2 = random.randint(0,(len(armor) -1))
   roll3 = random.randint(0,(len(buff)-1))
-  roll4 = random.randint(1,50)
+  roll4 = random.randint(1,20)
   r = roll
   r2 = roll2
   r3 = roll3
@@ -274,7 +291,15 @@ def armor_roll():
   buf = buff[r3]
   wait = str(weight())
 
-  result = "```\n" +buf + " " +  arm  + "\n+" + strr +" AC\n" + "+" + st4 + " " + buf + " Resistence\n" + "Weight: "+ wait + "lbs\n```"
+  result = (f'''
+  ```
+  {buf} {arm}
+  +{strr} AC
+  +{st4} {buf} Resistance
+  Weight: {wait}lbs
+  ```
+  
+  ''')
 
   return result
   
@@ -290,7 +315,20 @@ async def on_ready():
     if message.author == client.user:
       return
     
+
+    if message.content.startswith('!Commands') or message.content.startswith('!commands'):
+      await message.channel.send("``` \n")
+
+      l = (len(com)-1)
     
+      for x in range(l):
+        c = comm(x)
+        await message.channel.send(c + " \n")
+      await message.channel.send("```\n")
+        
+
+
+      
     if message.content.startswith('!Rock') or message.content.startswith('!rock'):
       x = rando(1,3)
       rps = rock(x)
@@ -538,8 +576,16 @@ async def on_ready():
       await message.channel.send(cmu)
     if message.content.startswith("I'm depressed") or message.content.startswith('I am depressed'):
       cmu = cheers()
-      
       await message.channel.send(cmu)
+    if message.content.startswith("Give me a quote chip") or message.content.startswith("give me a quote chip"):
+      r = get_quote()
+      qr = quoter[r]
+      chip_quote = (f'''
+      ```
+      {qr}
+      ```
+      ''')
+      await message.channel.send(chip_quote)
       
    
    #---------------------------------------------------------JOKE-------------------------------------------------------# 
@@ -551,7 +597,7 @@ async def on_ready():
     if message.content.startswith('Chip, who is your father') or message.content.startswith('chip, who is your father'):
       await message.channel.send('I was created in Circuit Bored Lab on 8/8/2022 \n by Shaun(enzosupreme)\n He is my father.')
 
-    if message.content.startswith('Happy Two Weeks chip') or message.content.startswith('happy two weeks chip'):
+    if message.content.startswith('Happy One Month bday chip') or message.content.startswith('happy two weeks chip'):
       await message.channel.send(':partying_face: \n')
       await message.channel.send('Getting older and Wiser!')
 
@@ -573,7 +619,7 @@ async def on_ready():
       
 
 my_secret = os.environ['TOKEN']
-keep_alive()
+#keep_alive()
 client.run(my_secret)
 
 
